@@ -12,5 +12,7 @@ import SneakyLenny from './components/SneakyLenny.vue';
 .container {
   width: max-content;
   border: dashed red;
+  width: 48rem;
+  height: 48rem;
 }
 </style>

@@ -3,29 +3,32 @@
 </script>
 
 <template>
-  <div class="background">
-    <div class="container">
-      <span class="lennyface">
+  <div class="layer1">
+    <div class="layer2">
+      <div class="lennyface">
         ( ͡° ͜ʖ ͡°)
-      </span>
+      </div>
     </div>
   </div>
 </template>
 
 
 <style scoped>
-.background {
-  background: white;
-  width: 48rem;
-  height: 48rem;
+.layer1 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
-.container {
+.layer1::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  display: inline-block;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-size: 100% 100%;
   background: conic-gradient(
     hsl(0, 100%, 50%) 0deg,
     hsl(60, 100%, 50%) 60deg,
@@ -35,13 +38,22 @@
     hsl(300, 100%, 50%) 300deg,
     hsl(0, 100%, 50%) 360deg
   );
-  color: transparent;
-  background-clip: text;
+  transform: rotate(-15deg);
+}
+
+.layer2 {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  mix-blend-mode: screen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lennyface {
   font-family: Arial, sans-serif;
-  font-size: 16em;
   transform: scaleY(1.2) translateY(-6%);
+  font-size: 16em;
 }
 </style>
