@@ -10,9 +10,11 @@ import SneakyLenny from './components/SneakyLenny.vue';
 
 <style scoped>
 .container {
+  zoom: 0.2; 
+
   width: max-content;
   border: dashed red;
-  width: 48rem;
-  height: 48rem;
+  width: 4096px;
+  height: 4096px;
 }
 </style>

@@ -54,6 +54,6 @@
 .lennyface {
   font-family: Arial, sans-serif;
   transform: scaleY(1.2) translateY(-6%);
-  font-size: 16em;
+  font-size: 70vw;
 }
 </style>
